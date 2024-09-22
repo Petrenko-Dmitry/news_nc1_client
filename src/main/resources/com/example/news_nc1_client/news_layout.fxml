@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="627.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.news_nc1_client.NewsController">
+    <children>
+        <!-- Buttons for filtering -->
+        <HBox layoutX="14.0" layoutY="14.0" spacing="10" alignment="CENTER">
+            <Button fx:id="morningButton" text="Morning"/>
+            <Button fx:id="dayButton" text="Day"/>
+            <Button fx:id="eveningButton" text="Evening"/>
+            <Button fx:id="clearButton" text="Clear Filter"/>
+        </HBox>
+        <!-- Table with news -->
+        <TableView fx:id="newsTableView" layoutX="14.0" layoutY="50.0" prefHeight="400.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="titleColumn" prefWidth="200" text="Title"/>
+                <TableColumn fx:id="dateColumn" prefWidth="200" text="Date"/>
+            </columns>
+        </TableView>
+        <!-- Buttons for navigation -->
+        <HBox layoutX="14.0" layoutY="360.0" spacing="10" alignment="CENTER">
+            <Button fx:id="prevButton" text="←"/>
+            <Button fx:id="nextButton" text="→"/>
+        </HBox>
+        <!-- Field with a description of the news -->
+        <TextArea fx:id="newsDetails" layoutX="420.0" layoutY="50.0" prefWidth="400.0" prefHeight="400.0" wrapText="true"/>
+    </children>
+</VBox>
